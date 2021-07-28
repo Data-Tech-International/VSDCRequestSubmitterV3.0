@@ -37,6 +37,8 @@
             this.txtCertificateName = new System.Windows.Forms.TextBox();
             this.txtPAC = new System.Windows.Forms.TextBox();
             this.lblPAC = new System.Windows.Forms.Label();
+            this.comboBoxAcceptLanguage = new System.Windows.Forms.ComboBox();
+            this.lblAcceptLanguage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtRequest
@@ -131,11 +133,35 @@
             this.lblPAC.TabIndex = 8;
             this.lblPAC.Text = "PAC:";
             // 
+            // comboBoxAcceptLanguage
+            // 
+            this.comboBoxAcceptLanguage.FormattingEnabled = true;
+            this.comboBoxAcceptLanguage.Items.AddRange(new object[] {
+            "default",
+            "option1",
+            "option2",
+            "sr-Latn"});
+            this.comboBoxAcceptLanguage.Location = new System.Drawing.Point(673, 331);
+            this.comboBoxAcceptLanguage.Name = "comboBoxAcceptLanguage";
+            this.comboBoxAcceptLanguage.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxAcceptLanguage.TabIndex = 9;
+            // 
+            // lblAcceptLanguage
+            // 
+            this.lblAcceptLanguage.AutoSize = true;
+            this.lblAcceptLanguage.Location = new System.Drawing.Point(670, 302);
+            this.lblAcceptLanguage.Name = "lblAcceptLanguage";
+            this.lblAcceptLanguage.Size = new System.Drawing.Size(120, 17);
+            this.lblAcceptLanguage.TabIndex = 10;
+            this.lblAcceptLanguage.Text = "Accept-Language\r\n";
+            // 
             // VSDCRequestSubmitter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblAcceptLanguage);
+            this.Controls.Add(this.comboBoxAcceptLanguage);
             this.Controls.Add(this.lblPAC);
             this.Controls.Add(this.txtPAC);
             this.Controls.Add(this.lvlCertificateSubjectName);
@@ -163,6 +189,8 @@
         private System.Windows.Forms.TextBox txtCertificateName;
         private System.Windows.Forms.TextBox txtPAC;
         private System.Windows.Forms.Label lblPAC;
+        private System.Windows.Forms.ComboBox comboBoxAcceptLanguage;
+        private System.Windows.Forms.Label lblAcceptLanguage;
     }
 }
 

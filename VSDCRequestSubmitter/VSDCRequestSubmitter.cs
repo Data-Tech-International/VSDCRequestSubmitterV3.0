@@ -34,7 +34,7 @@ namespace VSDCRequestSubmitter
 
         private void btnSubmittRequest_Click(object sender, EventArgs e)
         {
-            VSDCApiProxy proxy = new VSDCApiProxy(txtVSDCAddress.Text, txtCertificateName.Text, txtPAC.Text);
+            VSDCApiProxy proxy = new VSDCApiProxy(txtVSDCAddress.Text, txtCertificateName.Text, txtPAC.Text, comboBoxAcceptLanguage.SelectedItem.ToString());
 
             Directory.CreateDirectory($"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result");
 
