@@ -138,9 +138,8 @@
             this.comboBoxAcceptLanguage.FormattingEnabled = true;
             this.comboBoxAcceptLanguage.Items.AddRange(new object[] {
             "default",
-            "option1",
-            "option2",
-            "sr-Latn"});
+            "en-US",
+            "sr-Cyrl-RS"});
             this.comboBoxAcceptLanguage.Location = new System.Drawing.Point(673, 331);
             this.comboBoxAcceptLanguage.Name = "comboBoxAcceptLanguage";
             this.comboBoxAcceptLanguage.Size = new System.Drawing.Size(121, 24);
@@ -173,6 +172,7 @@
             this.Controls.Add(this.txtRequest);
             this.Name = "VSDCRequestSubmitter";
             this.Text = "VSDC Request Submitter";
+            this.Load += new System.EventHandler(this.VSDCRequestSubmitter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

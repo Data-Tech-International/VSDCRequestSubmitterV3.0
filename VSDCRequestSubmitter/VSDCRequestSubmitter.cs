@@ -42,5 +42,10 @@ namespace VSDCRequestSubmitter
 
             MessageBox.Show($"Signing was successful, find signing result at: {$"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result"}");
         }
+
+        private void VSDCRequestSubmitter_Load(object sender, EventArgs e)
+        {
+            comboBoxAcceptLanguage.SelectedIndex = 0;
+        }
     }
 }

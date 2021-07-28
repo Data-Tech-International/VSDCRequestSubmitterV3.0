@@ -8,5 +8,8 @@
     <Setting Name="CertificateName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">REPLACE WITH POS PFX Certificate Name (Subject CN)</Value>
     </Setting>
+    <Setting Name="PAC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">REPLACE WITH PAC</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -42,7 +42,11 @@ namespace VSDCRequestSubmitter.Proxies
                     client.DefaultRequestHeaders.Accept.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     client.DefaultRequestHeaders.Add("PAC", PAC);
-                    client.DefaultRequestHeaders.Add("Accept-Language", AcceptedLanguage);
+                    if (AcceptedLanguage != "default")
+                    {
+                        client.DefaultRequestHeaders.Add("Accept-Language", AcceptedLanguage);
+                    }
+                    
 
                     return client.PostAsJsonAsync($"{VSDCAddress}/api/v3/invoices", request).Result.Content.ReadAsStringAsync().Result;
                 }
