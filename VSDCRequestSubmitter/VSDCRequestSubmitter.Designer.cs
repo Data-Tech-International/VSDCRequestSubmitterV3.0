@@ -115,9 +115,7 @@
             // 
             // txtPAC
             // 
-            this.txtPAC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPAC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPAC.Location = new System.Drawing.Point(12, 408);
             this.txtPAC.Name = "txtPAC";
@@ -126,6 +124,7 @@
             // 
             // lblPAC
             // 
+            this.lblPAC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPAC.AutoSize = true;
             this.lblPAC.Location = new System.Drawing.Point(12, 388);
             this.lblPAC.Name = "lblPAC";
@@ -135,6 +134,7 @@
             // 
             // comboBoxAcceptLanguage
             // 
+            this.comboBoxAcceptLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxAcceptLanguage.FormattingEnabled = true;
             this.comboBoxAcceptLanguage.Items.AddRange(new object[] {
             "default",
@@ -147,6 +147,7 @@
             // 
             // lblAcceptLanguage
             // 
+            this.lblAcceptLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAcceptLanguage.AutoSize = true;
             this.lblAcceptLanguage.Location = new System.Drawing.Point(670, 302);
             this.lblAcceptLanguage.Name = "lblAcceptLanguage";
