@@ -28,6 +28,8 @@ namespace VSDCRequestSubmitter.Models
 
         public string ReferentDocumentNumber { get; set; }
 
+        public DateTime? ReferentDocumentDT { get; set; }
+
         #endregion
 
         #region Items
