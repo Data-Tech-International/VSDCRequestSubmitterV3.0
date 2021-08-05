@@ -39,6 +39,8 @@
             this.lblPAC = new System.Windows.Forms.Label();
             this.comboBoxAcceptLanguage = new System.Windows.Forms.ComboBox();
             this.lblAcceptLanguage = new System.Windows.Forms.Label();
+            this.lblrequestId = new System.Windows.Forms.Label();
+            this.txtRequestId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtRequest
@@ -119,7 +121,7 @@
             this.txtPAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPAC.Location = new System.Drawing.Point(12, 408);
             this.txtPAC.Name = "txtPAC";
-            this.txtPAC.Size = new System.Drawing.Size(645, 30);
+            this.txtPAC.Size = new System.Drawing.Size(282, 30);
             this.txtPAC.TabIndex = 7;
             // 
             // lblPAC
@@ -155,11 +157,32 @@
             this.lblAcceptLanguage.TabIndex = 10;
             this.lblAcceptLanguage.Text = "Accept-Language\r\n";
             // 
+            // lblrequestId
+            // 
+            this.lblrequestId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblrequestId.AutoSize = true;
+            this.lblrequestId.Location = new System.Drawing.Point(331, 388);
+            this.lblrequestId.Name = "lblrequestId";
+            this.lblrequestId.Size = new System.Drawing.Size(76, 17);
+            this.lblrequestId.TabIndex = 12;
+            this.lblrequestId.Text = "RequestId:";
+            // 
+            // txtRequestId
+            // 
+            this.txtRequestId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtRequestId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRequestId.Location = new System.Drawing.Point(331, 408);
+            this.txtRequestId.Name = "txtRequestId";
+            this.txtRequestId.Size = new System.Drawing.Size(282, 30);
+            this.txtRequestId.TabIndex = 11;
+            // 
             // VSDCRequestSubmitter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblrequestId);
+            this.Controls.Add(this.txtRequestId);
             this.Controls.Add(this.lblAcceptLanguage);
             this.Controls.Add(this.comboBoxAcceptLanguage);
             this.Controls.Add(this.lblPAC);
@@ -192,6 +215,8 @@
         private System.Windows.Forms.Label lblPAC;
         private System.Windows.Forms.ComboBox comboBoxAcceptLanguage;
         private System.Windows.Forms.Label lblAcceptLanguage;
+        private System.Windows.Forms.Label lblrequestId;
+        private System.Windows.Forms.TextBox txtRequestId;
     }
 }
 

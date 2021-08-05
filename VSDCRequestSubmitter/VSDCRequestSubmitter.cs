@@ -34,13 +34,13 @@ namespace VSDCRequestSubmitter
 
         private void btnSubmittRequest_Click(object sender, EventArgs e)
         {
-            VSDCApiProxy proxy = new VSDCApiProxy(txtVSDCAddress.Text, txtCertificateName.Text, txtPAC.Text, comboBoxAcceptLanguage.SelectedItem.ToString());
+            VSDCApiProxy proxy = new VSDCApiProxy(txtVSDCAddress.Text, txtCertificateName.Text, txtPAC.Text, comboBoxAcceptLanguage.SelectedItem.ToString(), lblrequestId.Text);
 
             Directory.CreateDirectory($"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result");
 
             File.WriteAllText($"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result\\Response.Json", proxy.ExecuteRequest(JsonConvert.DeserializeObject<InvoiceRequest>(txtRequest.Text)));
 
-            MessageBox.Show($"Signing was successful, find signing result at: {$"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result"}");
+            MessageBox.Show($"Find signing result at: {$"{Path.GetDirectoryName(Application.ExecutablePath)}\\Result"}");
         }
 
         private void VSDCRequestSubmitter_Load(object sender, EventArgs e)

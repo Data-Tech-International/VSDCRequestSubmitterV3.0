@@ -17,14 +17,15 @@ namespace VSDCRequestSubmitter.Proxies
 
         private string Cn { get; set; }
         private string PAC { get; set; }
-
+        private string RequestId { get; set; }
         private string AcceptedLanguage { get; set; }
-        public VSDCApiProxy(string vSDCAddress, string cn, string pac, string acceptedLanguage)
+        public VSDCApiProxy(string vSDCAddress, string cn, string pac, string acceptedLanguage, string requestId)
         {
             this.VSDCAddress = vSDCAddress;
             this.Cn = cn;
             this.PAC = pac;
             this.AcceptedLanguage = acceptedLanguage;
+            this.RequestId = requestId;
         }
 
         public string ExecuteRequest(InvoiceRequest request)
@@ -33,8 +34,8 @@ namespace VSDCRequestSubmitter.Proxies
             {
                 handler.ClientCertificateOptions = ClientCertificateOption.Manual;
                 handler.ClientCertificates.Add(LoadMyCertificate(Cn));
-                
-                
+
+
                 using (var client = new HttpClient(handler))
                 {
                     client.BaseAddress = new Uri(VSDCAddress);
@@ -46,7 +47,10 @@ namespace VSDCRequestSubmitter.Proxies
                     {
                         client.DefaultRequestHeaders.Add("Accept-Language", AcceptedLanguage);
                     }
-                    
+                    if (!String.IsNullOrEmpty(RequestId))
+                    {
+                        client.DefaultRequestHeaders.Add("RequestId", RequestId);
+                    }
 
                     return client.PostAsJsonAsync($"{VSDCAddress}/api/v3/invoices", request).Result.Content.ReadAsStringAsync().Result;
                 }
