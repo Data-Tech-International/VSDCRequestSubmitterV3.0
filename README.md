@@ -5,7 +5,13 @@ Use this mini app to send an invoice request in order to get signature from VSDC
 
 Contact Tax Authority to obtain POS PFX file along with corresponding ROOT and Issuing certificates.
 
-### Follow these steps:
+## Version and Applicability
+
+This version applies to following environments
+
+- Serbia
+
+## Follow these steps:
 
 * Install ROOT and Issuing certificates to machine certificate store based on guide provided by the Tax Authority.
 * Install POS PFX file to the current user personal store.
