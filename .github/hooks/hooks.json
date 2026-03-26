@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "./scripts/copilot-pre-tool-check.sh",
+        "powershell": ".\\scripts\\copilot-pre-tool-check.ps1",
+        "cwd": ".",
+        "timeoutSec": 15
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "echo '{\"decision\":\"allow\"}'",
+        "powershell": "Write-Output '{\"decision\":\"allow\"}'",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}

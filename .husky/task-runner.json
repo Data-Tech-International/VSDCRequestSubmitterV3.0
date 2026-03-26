@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "name": "dotnet-format-staged",
+      "group": "pre-commit",
+      "command": "dotnet",
+      "args": ["format", "VSDCRequestSubmitterV3.0.sln", "--no-restore", "--include", "${staged}"],
+      "include": ["**/*.cs"],
+      "exclude": ["**/*.Designer.cs"]
+    },
+    {
+      "name": "check-secrets",
+      "group": "pre-commit",
+      "command": "bash",
+      "args": ["scripts/check-secrets.sh"],
+      "include": ["**/*.cs"]
+    },
+    {
+      "name": "build-verify",
+      "group": "pre-push",
+      "command": "dotnet",
+      "args": ["msbuild", "VSDCRequestSubmitterV3.0.sln", "/t:Build", "/p:Configuration=Debug", "/v:minimal", "/nologo"],
+      "output": "verbose"
+    }
+  ]
+}

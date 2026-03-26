@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "Context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "GitHub": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_pat}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "github_pat",
+      "description": "GitHub Personal Access Token (for MCP server)",
+      "password": true
+    }
+  ]
+}
